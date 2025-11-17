@@ -182,6 +182,15 @@ section:nth-child(5) {
     display: flex;
     justify-content: space-between;
     gap: 123px;
+    @media screen and (max-width: 1275px) {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    @media screen and (max-width: 725px) {
+        gap: 48px;
+        
+    }
 }
 
 .about-content {
@@ -202,19 +211,46 @@ section:nth-child(5) {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    @media screen and (max-width: 1275px) {
+        align-items: center;
+    }
+    @media screen and (max-width: 725px) {
+        gap: 24px;
+        
+    }
 }
 
 .project {
     display: flex;
     gap: 124px;
+    @media screen and (max-width: 1275px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    @media screen and (max-width: 725px) {
+        gap: 16px;
+        padding: 0;
+    }
     .project-image {
         height: 338px;
         border-radius: 20px;
         overflow: hidden;
+        min-width: 220px;
+        max-width: 100vw;
         img {
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+        @media screen and (max-width: 1275px) {
+            width: 100%;
+            height: 220px;
+            max-width: 400px;
+        }
+        @media screen and (max-width: 725px) {
+            height: 160px;
+            max-width: 100vw;
         }
     }
     .project-info {
@@ -223,14 +259,32 @@ section:nth-child(5) {
         justify-content: space-between;
         gap: 20px;
         max-width: 495px;
+        @media screen and (max-width: 1275px) {
+            max-width: 400px;
+            align-items: center;
+            text-align: center;
+        }
+        @media screen and (max-width: 725px) {
+            gap: 10px;
+            max-width: 95vw;
+        }
         .number {
             font-size: 48px;
+            @media screen and (max-width: 725px) {
+                font-size: 28px;
+            }
         }
         .project-title {
             font-size: 30px;
+            @media screen and (max-width: 725px) {
+                font-size: 18px;
+            }
         }
         .project-description {
-            color: #FFFFFF99
+            color: #FFFFFF99;
+            @media screen and (max-width: 725px) {
+                font-size: 14px;
+            }
         }
     }
     .more-btn {
@@ -238,12 +292,22 @@ section:nth-child(5) {
         padding: 16px 20px;
         border-radius: 8px;
         margin-right: auto;
+        @media screen and (max-width: 1275px) {
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 725px) {
+            padding: 8px 12px;
+            font-size: 12px;
+        }
     }
 }
 
 .project:nth-child(even) {
     .project-image {
        order: 1;
+    }
+    @media screen and (max-width: 1275px) {
+        flex-direction: column-reverse;
     }
 }
 
